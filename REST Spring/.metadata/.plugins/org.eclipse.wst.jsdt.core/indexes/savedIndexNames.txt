@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\PJCA5\REST Spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2741010517.index
+3640044208.index
+2108900101.index
+1911519432.index
+2449557664.index
+3668454804.index

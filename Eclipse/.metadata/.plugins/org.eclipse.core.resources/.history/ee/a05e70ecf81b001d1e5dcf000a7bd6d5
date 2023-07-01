@@ -1,0 +1,11 @@
+package singlylinkedlist;
+
+public class LinkedList {
+	    Node head;  // head of list
+	    class Node/* Node Class */
+	    {
+	        int data;
+	        Node next;  
+	        Node(int d) {data = d; next = null; } // Constructor to create a new node
+	    }
+}

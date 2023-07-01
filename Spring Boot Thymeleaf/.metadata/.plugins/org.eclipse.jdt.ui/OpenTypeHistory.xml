@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=34-thymeleafdemo-employees-list-db/C:\/Users\/Adinath75\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.7\/spring-data-jpa-2.7.7.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.7=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository.support(JpaRepositoryImplementation.class[JpaRepositoryImplementation" modifiers="1537" timestamp="1675411647981"/>
+    <typeInfo handle="=34-thymeleafdemo-employees-list-db/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nath.springboot.thymeleafdemo.dao{EmployeeRepository.java[EmployeeRepository" modifiers="513" timestamp="1675682235784"/>
+    <typeInfo handle="=34-thymeleafdemo-employees-list-db/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nath.springboot.thymeleafdemo.service{EmployeeService.java[EmployeeService" modifiers="513" timestamp="1675682322885"/>
+</typeInfoHistroy>

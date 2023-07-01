@@ -1,0 +1,21 @@
+package com.linkedlist;
+
+
+public class Main {
+	class Node {
+		int data;
+		Node next;
+
+		Node(int value)
+		{
+			this.data = value;
+			this.next = null;
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println("ghj");
+	}
+		
+}
+

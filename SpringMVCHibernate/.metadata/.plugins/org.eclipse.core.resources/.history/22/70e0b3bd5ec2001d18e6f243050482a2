@@ -1,0 +1,5 @@
+package com.nath.student.crud.entity;
+
+public class Student {
+
+}

@@ -1,0 +1,47 @@
+package leetcodes;
+
+import java.util.Scanner;
+
+public class SubstringCom {
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		int n = in.nextInt();
+		String[] arr = new String[str.length()-2];
+		for(int i=0;i<str.length()-(n-1);i++) {
+			arr[i] = str.substring(i, i+n);
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+" ");
+		}
+		int a = 0;
+		String st = "z";
+		for (int i=0;i<arr.length ;i++ )
+		{
+			a=0;
+			for (int j=i+1;j<arr.length ;j++ )
+			{
+				if (arr[i].charAt(a) > arr[j].charAt(a))
+				{
+					st = arr[i];
+					arr[i] = arr[j];
+					arr[j]= st;
+				}
+				else if(arr[i].charAt(a) == arr[j].charAt(a)){
+					j--;
+					a++;
+				}
+			}
+		}
+		System.out.println();
+		String smallest = arr[0];
+		String largest = arr[arr.length-1];
+		System.out.println(smallest +" "+largest);
+		System.out.println();
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+" ");
+		}
+	}
+
+}

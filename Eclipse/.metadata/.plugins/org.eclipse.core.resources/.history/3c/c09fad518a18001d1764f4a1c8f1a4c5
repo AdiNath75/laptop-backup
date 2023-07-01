@@ -1,0 +1,27 @@
+package leetcodes;
+
+import java.util.Scanner;
+
+public class SubstringCom {
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		int k = in.nextInt();
+	    java.util.List<String> a = new java.util.ArrayList<>();
+
+	    for(int i=0;i<str.length()-k+1;i++){
+            a.add(str.substring(i,i+k));   
+    }
+        java.util.Collections.sort(a);
+
+		String smallest = a.get(0);
+		String largest = a.get(a.size()-1);
+		System.out.println(smallest +" "+largest);
+		System.out.println();
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+" ");
+		}
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.nath.student.crud.service;
+
+public class StudentService {
+	
+	List < Employee > getAllEmployees();
+    void saveEmployee(Employee employee);
+    Employee getEmployeeById(long id);
+    void deleteEmployeeById(long id);
+
+
+}

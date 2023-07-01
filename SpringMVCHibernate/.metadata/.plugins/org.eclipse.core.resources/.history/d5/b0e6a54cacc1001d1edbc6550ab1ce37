@@ -1,0 +1,5 @@
+package com.nath.registration.validation.model;
+
+public class User {
+
+}

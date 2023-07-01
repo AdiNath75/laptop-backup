@@ -1,0 +1,89 @@
+package com.linkedlist;
+
+public class Palindrome {
+	
+	public static ListNode1 getMiddle(ListNode1 head) {
+		ListNode1 fast = head;
+		ListNode1 slow = head;
+		while (fast.next != null && fast.next.next != null) {
+			fast = fast.next.next;
+			slow = slow.next;
+		}
+		return slow;
+	}
+
+	public static ListNode1 reverse(ListNode head) {
+		ListNode1 prev = null;
+		ListNode1 curr = head;
+
+		while (curr != null) {
+			ListNode1 next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		return prev;
+	}
+
+	public static boolean isPalindrome(ListNode1 head) {
+		if (head == null || head.next == null) {
+			return true;
+		}
+
+		ListNode1 firstHalfEnd = getMiddle(head);
+		ListNode1 secondHalfStart = reverse(firstHalfEnd.next);
+		ListNode1 firstHalfStart = head;
+
+		while (secondHalfStart != null) {
+			if (secondHalfStart.val != firstHalfStart.val) {
+				return false;
+			}
+			secondHalfStart = secondHalfStart.next;
+			firstHalfStart = firstHalfStart.next;
+		}
+
+		return true;
+	}
+	
+	public static void main(String[] args)
+	{
+		ListNode1 head = new ListNode1(1);
+		head.next = new ListNode1(2);
+		head.next.next = new ListNode1(3);
+		head.next.next.next = new ListNode1(4);
+		head.next.next.next.next = new ListNode1(5);
+		System.out.println("Linked List before Deletion:");
+		printList(head);
+
+		boolean ans = isPalindrome(head);
+
+		System.out.println("Linked List after Deletion:");
+		printList(head);
+	}
+	
+	static void printList(ListNode head)
+	{
+		ListNode ptr = head;
+		while (ptr != null) {
+		System.out.print(ptr.data + " ");
+		ptr = ptr.next;
+		}
+		System.out.println();
+	}
+}
+
+class ListNode1 {
+	int val = 5;
+	ListNode1 next;
+	
+	ListNode1(){}
+	
+	ListNode1(int val){
+		this.val = val;
+	}
+	
+	ListNode1(int val, ListNode1 next) {
+		this.val = val;
+		this.next = next;
+	}
+}

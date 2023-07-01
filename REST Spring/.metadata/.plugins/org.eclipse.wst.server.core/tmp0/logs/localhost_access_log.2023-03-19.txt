@@ -1,0 +1,7 @@
+127.0.0.1 - - [19/Mar/2023:14:36:55 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:36:56 +0530] "GET /spring-rest-demo/ HTTP/1.1" 200 222
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:36:56 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:36:59 +0530] "GET /spring-rest-demo/api/students HTTP/1.1" 200 137
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:37:03 +0530] "GET /spring-rest-demo/test/hello HTTP/1.1" 200 11
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:37:08 +0530] "GET /spring-rest-demo/api/students HTTP/1.1" 200 137
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:42:06 +0530] "GET /spring-rest-demo/api/students HTTP/1.1" 200 137

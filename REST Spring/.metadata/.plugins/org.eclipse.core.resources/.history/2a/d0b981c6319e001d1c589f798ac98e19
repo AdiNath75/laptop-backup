@@ -1,0 +1,5 @@
+package com.nath.jackson.json.demo;
+
+public class Student {
+
+}

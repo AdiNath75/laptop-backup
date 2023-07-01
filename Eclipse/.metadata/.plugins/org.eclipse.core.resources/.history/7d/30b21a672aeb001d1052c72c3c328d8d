@@ -1,0 +1,53 @@
+package com.linkedlist;
+
+
+public class NthFromLast {
+	ListNode head;
+	class ListNode{
+		int data;
+		ListNode next;
+	
+		ListNode(int value) {
+			this.data = value;
+			this.next = null;
+		}
+}
+
+class Main {
+	static int length(NthFromLast head) {
+		NthFromLast temp = head;
+		int count = 0;
+		while (temp != null) {
+			count++;
+			temp = temp.next;
+		}
+		return count;
+	}
+
+	static void printList(NthFromLast head) {
+		NthFromLast ptr = head;
+		while (ptr != null) {
+			System.out.print(ptr.data + " ");
+			ptr = ptr.next;
+		}
+		System.out.println();
+	}
+
+	static NthFromLast deleteNthNodeFromEnd(NthFromLast head, int n) {
+		int Length = length(head);
+		int nodeFromBeginning = Length - n + 1;
+		NthFromLast prev = null;
+		NthFromLast temp = head;
+		for (int i = 1; i < nodeFromBeginning; i++) {
+			prev = temp;
+			temp = temp.next;
+		}
+		if (prev == null) {
+			head = head.next;
+			return head;
+		} else {
+			prev.next = prev.next.next;
+			return head;
+		}
+	}
+}

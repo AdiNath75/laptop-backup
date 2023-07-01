@@ -1,0 +1,5 @@
+package com.nath.registration.validation.controller;
+
+public class MainController {
+
+}

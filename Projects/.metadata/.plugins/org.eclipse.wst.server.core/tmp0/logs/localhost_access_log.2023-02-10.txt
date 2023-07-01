@@ -1,0 +1,5 @@
+127.0.0.1 - - [10/Feb/2023:22:39:30 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [10/Feb/2023:22:39:31 +0530] "GET /spring-security-demo/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Feb/2023:22:39:32 +0530] "GET /spring-security-demo/showMyLoginPage HTTP/1.1" 200 2351
+0:0:0:0:0:0:0:1 - - [10/Feb/2023:22:39:37 +0530] "POST /spring-security-demo/authenticateTheUser HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Feb/2023:22:39:37 +0530] "GET /spring-security-demo/showMyLoginPage?error HTTP/1.1" 200 2485

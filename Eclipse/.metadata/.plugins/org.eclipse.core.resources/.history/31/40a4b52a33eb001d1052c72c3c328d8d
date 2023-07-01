@@ -1,0 +1,82 @@
+package com.linkedlist;
+
+public class Palindrome {
+	
+
+	public static ListNodea getMiddle(ListNodea head) {
+		ListNodea fast = head;
+		ListNodea slow = head;
+		while (fast.next != null && fast.next.next != null) {
+			fast = fast.next.next;
+			slow = slow.next;
+		}
+		return slow;
+	}
+
+	public static ListNodea reverse(ListNodea head) {
+		ListNodea prev = null;
+		ListNodea curr = head;
+
+		while (curr != null) {
+			ListNodea next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		return prev;
+	}
+
+	public static boolean isPalindrome(ListNodea head) {
+		if (head == null || head.next == null) {
+			return true;
+		}
+
+		ListNodea firstHalfEnd = getMiddle(head);
+		ListNodea secondHalfStart = reverse(firstHalfEnd.next);
+		ListNodea firstHalfStart = head;
+
+		while (secondHalfStart != null) {
+			if (secondHalfStart.val != firstHalfStart.val) {
+				return false;
+			}
+			secondHalfStart = secondHalfStart.next;
+			firstHalfStart = firstHalfStart.next;
+		}
+
+		return true;
+	}
+	
+	public static void main(String[] args)
+	{
+		ListNodea head = new ListNodea(1);
+		head.next = new ListNodea(2);
+		head.next.next = new ListNodea(3);
+		head.next.next.next = new ListNodea(4);
+		head.next.next.next.next = new ListNodea(5);
+		System.out.println("Linked List before Deletion:");
+
+		boolean ans = isPalindrome(head);
+
+		System.out.println(ans);
+	}
+	
+}
+	
+	class ListNodea {
+		int val = 5;
+		ListNodea next;
+		
+		ListNodea(){}
+		
+		ListNodea(int val){
+			this.val = val;
+		}
+		
+		
+		ListNodea(int val, ListNodea next) {
+			this.val = val;
+			this.next = next;
+		}
+	}
+
+

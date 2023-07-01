@@ -1,0 +1,22 @@
+package leetcodes;
+
+public class ValidateIP {
+	public static void main(String[] args) {
+		String st = "00.16.254.1";
+		int count=0;int num = 0;int inc = 0;
+		for(int i=0;i<st.length();i++) {
+			if(st.charAt(i) == '.') {
+				count++;
+			}
+		}
+		String str = st.replace('.', '@');
+		String[] arr = str.split("@", count+1);
+		
+		for(String a : arr) {
+			System.out.println(a);
+			if(a == "00") {
+				System.out.print(2);
+			}
+		}
+	}
+}
