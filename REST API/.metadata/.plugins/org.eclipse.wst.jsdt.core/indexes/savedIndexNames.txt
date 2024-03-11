@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\PJCA5\REST API\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3218377120.index
+328042304.index
+2057587873.index
+2483856707.index
+3948508054.index
+633467151.index

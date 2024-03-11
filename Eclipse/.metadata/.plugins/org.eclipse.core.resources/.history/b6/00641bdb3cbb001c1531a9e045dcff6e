@@ -1,0 +1,14 @@
+package myprograms;
+
+
+public class BinToOct {
+	
+	public static void main(String[] args) {
+		import java.util.Scanner;
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		
+		
+	}
+
+}

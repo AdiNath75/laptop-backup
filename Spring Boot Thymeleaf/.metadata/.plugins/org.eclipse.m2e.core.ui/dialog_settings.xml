@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\PJCA5\Spring Boot Thymeleaf\41-Admin_User_Registration"/>
+			<item value="D:\PJCA5\Spring Boot Thymeleaf\40-registration-login-spri"/>
+			<item value="D:\PJCA5\Spring Boot Thymeleaf\39-School-Management-Software-newSms"/>
+			<item value="D:\PJCA5\Spring Boot Thymeleaf\38-School-Management-Software-master"/>
+			<item value="D:\PJCA5\Spring Boot Thymeleaf\30-thymeleafdemo-hello-world"/>
+			<item value="D:\ADI\Notes\Spring Boot\thymeleafdemo\thymeleafdemo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

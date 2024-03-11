@@ -1,0 +1,123 @@
+package com.nath;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Iterator;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class GetDataRates {
+
+	public static void main(String[] args) {
+		try {
+
+			URL url = new URL("https://api.coingecko.com/api/v3/exchange_rates\r\n" + "");// your url i.e fetch
+																							// data from .
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			conn.setRequestProperty("Accept", "application/json");
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Failed : HTTP Error code : " + conn.getResponseCode());
+			}
+			InputStreamReader in = new InputStreamReader(conn.getInputStream());
+			BufferedReader br = new BufferedReader(in);
+
+			String output;
+			String ans = "";
+			
+			while ((output = br.readLine()) != null) {
+				// System.out.println(output);
+				ans = ans + output;
+			}
+			conn.disconnect();
+			System.out.println(ans);
+			
+			String jsonString = ans;
+	        try {
+	            JSONObject jsonObject =new JSONObject(jsonString);
+	            JSONObject jsonChildObject = (JSONObject)jsonObject.get("btc");
+	            Iterator iterator  = jsonChildObject.keys();
+	            String key = null;
+	            while(iterator.hasNext()){
+	                key = (String)iterator.next();
+	                System.out.println("name value: "+((JSONObject)jsonChildObject.get(key)).get("name"));
+	            }
+	        }
+	        catch (JSONException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
+			
+			
+			String key = "eth";
+			String a = getJsonValue(ans, key);
+			System.out.println(a);
+			String k = "unit";
+			String b = getJsonValue(a, k);
+			System.out.println(b);
+
+		} catch (Exception e) {
+			System.out.println("Exception in NetClientGet:- " + e);
+		}
+	}
+
+	public static String getJsonValue(String jsonReq, String key) {
+
+		JSONObject json = new JSONObject(jsonReq);
+		boolean exists = json.has(key);
+		Iterator<?> keys;
+		String nextKeys;
+		String val = "";
+		if (!exists) {
+			keys = json.keys();
+			while (keys.hasNext()) {
+				nextKeys = (String) keys.next();
+				try {
+					if (json.get(nextKeys) instanceof JSONObject) {
+						return getJsonValue((json).getJSONObject(nextKeys).toString(), key);
+					} else if (json.get(nextKeys) instanceof JSONArray) {
+						JSONArray jsonArray = json.getJSONArray(nextKeys);
+						int i = 0;
+						if (i < jsonArray.length())
+							do {
+								String jsonArrayString = jsonArray.get(i).toString();
+								JSONObject innerJson = new JSONObject(jsonArrayString);
+								return getJsonValue(innerJson.toString(), key);
+							} while (i < jsonArray.length());
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		} else {
+			val = json.get(key).toString();
+		}
+		return val;
+	}
+
+//			JSONObject rates = (JSONObject) jsonObject.get("rates");
+//			System.out.println("rates: " + rates);
+//			String usd = (String) rates.get("usd");
+//			System.out.println("usd: " + usd);
+
+//			Object rates =  jsonObject.get("rates");
+//			System.out.println("rates: " + rates);
+//			
+//			String usd = (String) rates.get("usd");
+//			System.out.println("\tjava: " + usd);
+
+	// System.out.println(jsonObject.get("rates"));
+
+//		      List<String> list = new ArrayList<String>();
+//		      JSONArray jsonArray = jsonObject.getJSONArray("rates");
+//		      for(int i = 0 ; i < jsonArray.length(); i++) {
+//		         list.add(jsonArray.getJSONObject(i).getString("username"));
+//		         System.out.println(jsonArray.getJSONObject(i).getString("username")); // display usernames
+//		      }
+//		      System.out.println(list);
+
+}

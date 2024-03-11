@@ -1,0 +1,4 @@
+127.0.0.1 - - [28/Jan/2023:16:34:41 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:16:34:42 +0530] "GET /web-customer-tracker/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:16:34:42 +0530] "GET /web-customer-tracker/customer/list HTTP/1.1" 200 3426
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:16:34:42 +0530] "GET /web-customer-tracker/resources/css/style.css HTTP/1.1" 304 -

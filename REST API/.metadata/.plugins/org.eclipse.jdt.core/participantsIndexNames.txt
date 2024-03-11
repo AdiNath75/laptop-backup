@@ -1,0 +1,13 @@
+INDEX VERSION 1.134
+D:\PJCA5\REST API\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3611654856.index
+\02-zip-code-api\src\main\java
+D:\PJCA5\REST API\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1196461050.index
+\01-spring-crm-rest\src\main\java
+D:\PJCA5\REST API\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2048947370.index
+\zip-code-api\src\main\java
+D:\PJCA5\REST API\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4098858325.index
+\spring-crm-rest\src\main\java
+D:\PJCA5\REST API\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2945717961.index
+\03-rest-api-zip\src\main\java
+D:\PJCA5\REST API\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3381382364.index
+\rest-api-\src\main\java

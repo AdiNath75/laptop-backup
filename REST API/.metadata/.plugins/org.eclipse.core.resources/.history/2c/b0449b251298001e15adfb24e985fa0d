@@ -1,0 +1,66 @@
+package com.nath;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class GetDataRates {
+
+	public static void main(String[] args) {
+		try {
+
+			URL url = new URL("https://api.coingecko.com/api/v3/exchange_rates\r\n" + "");// your url i.e fetch
+																							// data from .
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			conn.setRequestProperty("Accept", "application/json");
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Failed : HTTP Error code : " + conn.getResponseCode());
+			}
+			InputStreamReader in = new InputStreamReader(conn.getInputStream());
+			BufferedReader br = new BufferedReader(in);
+
+			String output;
+			String ans = "";
+			while ((output = br.readLine()) != null) {
+				// System.out.println(output);
+				ans = ans + output;
+			}
+			conn.disconnect();
+			System.out.println(ans);
+
+			JSONObject jsonObject = new JSONObject(ans);
+		    JSONObject getSth = jsonObject.getJSONObject("LanguageLevels");
+		    Object level = getSth.get("2");
+
+		    System.out.println(level);
+//			JSONObject rates = (JSONObject) jsonObject.get("rates");
+//			System.out.println("rates: " + rates);
+//			String usd = (String) rates.get("usd");
+//			System.out.println("usd: " + usd);
+
+//			Object rates =  jsonObject.get("rates");
+//			System.out.println("rates: " + rates);
+//			
+//			String usd = (String) rates.get("usd");
+//			System.out.println("\tjava: " + usd);
+
+			// System.out.println(jsonObject.get("rates"));
+
+//		      List<String> list = new ArrayList<String>();
+//		      JSONArray jsonArray = jsonObject.getJSONArray("rates");
+//		      for(int i = 0 ; i < jsonArray.length(); i++) {
+//		         list.add(jsonArray.getJSONObject(i).getString("username"));
+//		         System.out.println(jsonArray.getJSONObject(i).getString("username")); // display usernames
+//		      }
+//		      System.out.println(list);
+
+		} catch (Exception e) {
+			System.out.println("Exception in NetClientGet:- " + e);
+		}
+	}
+}

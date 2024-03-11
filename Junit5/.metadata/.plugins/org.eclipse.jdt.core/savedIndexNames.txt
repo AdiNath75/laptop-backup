@@ -1,0 +1,12 @@
+INDEX VERSION 1.131+D:\PJCA5\Junit5\.metadata\.plugins\org.eclipse.jdt.core
+3288388187.index
+3088159103.index
+2927504440.index
+156402953.index
+970768739.index
+4134969787.index
+225975624.index
+3916827685.index
+1226039060.index
+3889366387.index
+1865797976.index

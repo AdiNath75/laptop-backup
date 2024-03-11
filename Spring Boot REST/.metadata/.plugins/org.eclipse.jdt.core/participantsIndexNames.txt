@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\PJCA5\Spring Boot REST\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1600700352.index
+\spring-rest-demo\src\main\java
+D:\PJCA5\Spring Boot REST\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3999014957.index
+\24-spring-data-rest-cruddemo\src\main\java
